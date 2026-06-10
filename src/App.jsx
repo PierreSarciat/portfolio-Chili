@@ -1,16 +1,10 @@
-
-import './App.css'
-
-function App() {
+import Layout from '@components/layout/Layout';
 
 
+export default function App() {
   return (
-    <>
-
-      <h1>Get started</h1>
-
-    </>
-  )
+    <div>
+      Outlet
+    </div>
+  );
 }
-
-export default App
