@@ -7,7 +7,7 @@ export default function Navbar() {
             <nav>
                 <ul>
                     <li>
-                        <NavLink>
+                        <NavLink >
                             TERRA AUSTRALIS
                         </NavLink>
                     </li>
@@ -17,22 +17,22 @@ export default function Navbar() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink>
+                        <NavLink to="/region">
                             PATAGONIE
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink>
+                        <NavLink to="/region">
                             ATACAMA
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink>
+                        <NavLink to="/region">
                             ARAUCANIE
                         </NavLink>
                     </li>
                 </ul>
             </nav>
-        </div>
+        </div >
     );
 };
