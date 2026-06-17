@@ -18,17 +18,22 @@ export default function Navbar() {
                     </li>
                     <li>
                         <NavLink to="/region">
-                            PATAGONIE
+                            Chiloe
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/region">
-                            ATACAMA
+                            Patagonie
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/region">
-                            ARAUCANIE
+                            Puerto Williams
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/region">
+                            Torres del Paine
                         </NavLink>
                     </li>
                 </ul>
