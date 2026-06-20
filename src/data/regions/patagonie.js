@@ -1,6 +1,5 @@
 // src/data/regions.js
-export const patagonie = [
-  {
+ const patagonie =   {
     id: "patagonie",
     name: "Patagonie",
     subtitle: "",
@@ -17,6 +16,6 @@ export const patagonie = [
       // ... autres photos
     ],
     // ... autres propriétés
-  },
- 
-];
+  };
+
+export default patagonie;

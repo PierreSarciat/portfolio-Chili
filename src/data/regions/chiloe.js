@@ -1,6 +1,5 @@
 // src/data/regions.js
-export const chiloe = [
-  {
+ const chiloe = {
     id: "chiloe",
     name: "Chiloe",
     subtitle: "",
@@ -17,6 +16,8 @@ export const chiloe = [
       // ... autres photos
     ],
     // ... autres propriétés
-  },
+  };
  
-];
+
+
+export default chiloe;

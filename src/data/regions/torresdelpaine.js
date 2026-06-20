@@ -1,6 +1,5 @@
 // src/data/regions.js
-export const torresdelpaine = [
-  {
+ const torresdelpaine = {
     id: "torresdelpaine",
     name: "Torres del Paine",
     subtitle: "",
@@ -17,6 +16,6 @@ export const torresdelpaine = [
       // ... autres photos
     ],
     // ... autres propriétés
-  },
- 
-];
+  };
+
+export default torresdelpaine;

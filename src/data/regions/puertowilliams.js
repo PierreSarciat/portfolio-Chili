@@ -1,6 +1,5 @@
 // src/data/regions.js
-export const puertowilliams = [
-  {
+const puertowilliams = {
     id: "puertowilliams",
     name: "PuertoWilliams",
     subtitle: "",
@@ -17,6 +16,6 @@ export const puertowilliams = [
       // ... autres photos
     ],
     // ... autres propriétés
-  },
- 
-];
+  };
+
+export default puertowilliams;
