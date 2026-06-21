@@ -21,11 +21,21 @@ function Region() {
         meta = {},
     } = region;
 
+    console.log(photos);
     return (
         <div>
             <h1>{name}</h1>
             <h2>{subtitle}</h2>
             <p>{description}</p>
+            <div>
+                {photos.map((photo) => (
+                    <img
+                        key={photo.id}
+                        src={photo.thumbnailSrc}
+                        alt={photo.alt}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
