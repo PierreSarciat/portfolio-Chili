@@ -18,6 +18,10 @@ const outputRoot = path.join(
   "../src/data/regions"
 );
 
+if (!fs.existsSync(outputRoot)) {
+  fs.mkdirSync(outputRoot, { recursive: true });
+}
+
 REGIONS.forEach((region) => {
   const thumbDir = path.join(
     imagesRoot,
@@ -25,46 +29,82 @@ REGIONS.forEach((region) => {
     "thumb"
   );
 
+  const fullDir = path.join(
+    imagesRoot,
+    region,
+    "full"
+  );
+
   if (!fs.existsSync(thumbDir)) {
-    console.log(`Dossier absent : ${thumbDir}`);
+    console.log(
+      `❌ Dossier thumb absent : ${thumbDir}`
+    );
     return;
   }
 
-  const files = fs
+  if (!fs.existsSync(fullDir)) {
+    console.log(
+      `❌ Dossier full absent : ${fullDir}`
+    );
+    return;
+  }
+
+  const thumbFiles = fs
     .readdirSync(thumbDir)
     .filter((file) =>
       /\.(jpg|jpeg|png|webp)$/i.test(file)
     );
 
-  const photos = files.map((file) => {
-    const basename = file.replace(
-      /\.(jpg|jpeg|png|webp)$/i,
-      ""
+  const fullFiles = fs
+    .readdirSync(fullDir)
+    .filter((file) =>
+      /\.(jpg|jpeg|png|webp)$/i.test(file)
     );
 
+  const photos = thumbFiles.map((thumbFile) => {
+    const basename = path.parse(
+      thumbFile
+    ).name;
+
+    const fullFile = fullFiles.find(
+      (file) =>
+        path.parse(file).name === basename
+    );
+
+    if (!fullFile) {
+      console.warn(
+        `⚠️ Image HD introuvable pour : ${basename}`
+      );
+    }
+
     return {
-      id: basename,
+      id: basename
+        .toLowerCase()
+        .replace(/\s+/g, "-"),
 
       thumbnailSrc:
-        `/assets/images/${region}/thumb/${file}`,
+        `/assets/images/${region}/thumb/${thumbFile}`,
 
       previewSrc:
-        `/assets/images/${region}/thumb/${file}`,
+        `/assets/images/${region}/thumb/${thumbFile}`,
 
-      fullSrc:
-        `/assets/images/${region}/full/${file}`,
+      fullSrc: fullFile
+        ? `/assets/images/${region}/full/${fullFile}`
+        : "",
 
       title: basename
-        .replace(/-/g, " ")
-        .replace(/\b\w/g, (c) =>
-          c.toUpperCase()
+        .replace(/[-_]/g, " ")
+        .replace(
+          /\b\w/g,
+          (char) => char.toUpperCase()
         ),
 
-      alt: basename.replace(/-/g, " "),
+      alt: basename
+        .replace(/[-_]/g, " "),
     };
   });
 
-  const content = `
+  const regionObject = `
 const ${region} = {
   id: "${region}",
   name: "${region}",
@@ -81,12 +121,22 @@ const ${region} = {
 export default ${region};
 `;
 
+  const outputFile = path.join(
+    outputRoot,
+    `${region}.js`
+  );
+
   fs.writeFileSync(
-    path.join(outputRoot, `${region}.js`),
-    content
+    outputFile,
+    regionObject,
+    "utf8"
   );
 
   console.log(
-    ` ${region}.js généré (${photos.length} photos)`
+    `✅ ${region}.js généré (${photos.length} photos)`
   );
 });
+
+console.log(
+  "\n🎉 Génération des données terminée."
+);
