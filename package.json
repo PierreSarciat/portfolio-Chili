@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node copy-to-thumb.cjs",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-data": "node scripts/generate-region-data.cjs"
   },
   "dependencies": {
     "react": "^19.2.6",
@@ -27,6 +29,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "sass-embedded": "^1.100.0",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "vite-plugin-image-optimizer": "^2.0.3"
   }
 }
