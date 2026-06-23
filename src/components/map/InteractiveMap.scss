@@ -1,0 +1,93 @@
+.interactive-map-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  /*background-color: rgba(var(--color-chile-secondary-rgb), 0.3);
+  border: 1px solid var(--color-chile-border);*/
+  border-radius: 0.125rem;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+   
+}
+
+.map-background {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  background-image: url('https://images.unsplash.com/photo-1713862032419-95a24b005dbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZSUyMHZpbnRhZ2UlMjBtYXB8ZW58MXx8fHwxNzgwNDMxMTUzfDA&ixlib=rb-4.1.0&q=80&w=1080');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+ 
+}
+
+.compass-rose {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  /*border: 1px solid rgba(var(--color-chile-sepia-rgb), 0.3);*/
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  .compass-inner {
+    width: 3rem;
+    height: 3rem;
+   /* border: 1px solid rgba(var(--color-chile-sepia-rgb), 0.2);*/
+    transform: rotate(45deg);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .compass-needle {
+      position: absolute;
+     /* background-color: rgba(var(--color-chile-sepia-rgb), 0.3);*/
+
+      &.vertical {
+        width: 1px;
+        height: 100%;
+      }
+
+      &.horizontal {
+        height: 1px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.chile-outline {
+  height: 100%;
+  width: auto;
+  filter: drop-shadow(4px 4px 8px rgba(45, 36, 30, 0.15));
+  z-index: 10;
+}
+
+.fallback-svg {
+  height: 100%;
+  width: auto;
+  z-index: 10;
+}
+
+.region-path {
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.region-label {
+  font-family: var(--font-cormorant);
+  font-size: 0.75rem;
+  fill: var(--color-chile-deep);
+  pointer-events: none;
+}
