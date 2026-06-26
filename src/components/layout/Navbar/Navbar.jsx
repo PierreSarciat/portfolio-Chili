@@ -6,9 +6,12 @@ export default function Navbar() {
         <nav>
             <ul>
                 <li>
-                    <NavLink to="/">
-                        TERRA AUSTRALIS
-                    </NavLink>
+                    <div>
+                        Chili
+                    </div>
+                    <div>
+                        Terres de contrastes
+                    </div>
                 </li>
 
                 <li>
