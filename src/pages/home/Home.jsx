@@ -1,4 +1,5 @@
 import { InteractiveMap } from '@/components/map/InteractiveMap';
+import "./Home.scss"
 
 function Home() {
     return (
@@ -6,13 +7,16 @@ function Home() {
             <section>
                 <h1>CARNETS DU CHILI</h1>
                 <p>
-                    Une exploration photographique des confins de la Terre,
-                    du désert le plus aride aux glaciers de Patagonie.
+                    Terres de contrastes
                 </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Adipiscing elit quisque faucibus ex sapien vitae pellentesque. Vitae pellentesque sem placerat in id cursus mi. Cursus mi pretium tellus duis convallis tempus leo. Tempus leo eu aenean sed diam urna tempor. Urna tempor pulvinar vivamus fringilla lacus nec metus.
+                </p>
+                <p>Explorez le Chili</p>
             </section>
 
             <section>
-                <div>Carte du Chili</div>
+
                 <InteractiveMap />
             </section>
 
