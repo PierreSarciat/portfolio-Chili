@@ -1,13 +1,17 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
+import CompassRose from "@assets/icons/rose-des-vents.png";
 
 export default function Navbar() {
     return (
         <nav>
             <ul>
                 <li>
-                    <div>
-                        Chili
+                    <div className="incipit">
+                        <div className="logo">
+                            <img src={CompassRose} alt="Rose des Vents" className="logo" />
+                        </div>
+                        <h1> Chili</h1>
                     </div>
                     <div>
                         Terres de contrastes
