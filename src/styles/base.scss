@@ -24,10 +24,12 @@ p {
 }
 
 // Styles pour les liens
-a {
-  color: inherit;
-  text-decoration: none;
- /* transition: color var(--transition-fast);*/
+ul{
+list-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 // Styles pour les images
