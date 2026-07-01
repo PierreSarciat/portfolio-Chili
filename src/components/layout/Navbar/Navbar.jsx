@@ -11,7 +11,7 @@ export default function Navbar() {
                     <img src={CompassRose} alt="Rose des Vents" className="logo" />
                 </div>
                 <div className="logo-texte">
-                    <h1>CHILI</h1>
+                    <h1 >CHILI</h1>
                     <p>Terres de contrastes</p>
                 </div>
             </div>
