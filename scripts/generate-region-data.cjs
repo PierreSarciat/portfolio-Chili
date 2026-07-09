@@ -132,11 +132,6 @@ export default ${region};
     "utf8"
   );
 
-  console.log(
-    `✅ ${region}.js généré (${photos.length} photos)`
-  );
+ 
 });
 
-console.log(
-  "\n🎉 Génération des données terminée."
-);
