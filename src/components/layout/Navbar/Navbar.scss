@@ -71,7 +71,7 @@
                 color: #3A312C;
                 transition: color 0.3s ease;
                 padding: 5px 10px;
-                border-radius: 4px;
+                
 
                 &:hover {
                     color: #B89A73; // Couleur accent sépia
@@ -79,7 +79,7 @@
 
                 &.active {
                     color: #B89A73;
-                    background-color: rgba(184, 154, 115, 0.1);
+                    
                 }
             }
         }

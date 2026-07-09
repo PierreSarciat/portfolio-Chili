@@ -1,27 +1,30 @@
 .border-with-dot {
   position: relative;
-  padding-bottom: 10px;
-  margin: 20px 0;
   width: 100%;
+
+    &--home{
+     display: inline-block; 
+  }
 
   &__border {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -5px; /* Positionne la bordure en dessous du texte */
     height: var(--border-width, 1px);
     background-color: var(--border-color, #3A312C);
   }
 
-  // Pseudo-élément pour le symbole ✦
+  /* Style pour le symbole ✦ */
   &::after {
     content: "✦";
     position: absolute;
     left: 50%;
-    bottom:80%;
-    transform: translate(-50%, 50%);
-    color: var(--dot-color, #B89A73);
-    height: var(--dot-size);
+    bottom: -11px; /* Aligne le symbole avec la bordure */
+    transform: translateX(-50%);
+    color: var(--dot-color);
+    font-size: var(--dot-size);
     background: transparent;
   }
+
 }

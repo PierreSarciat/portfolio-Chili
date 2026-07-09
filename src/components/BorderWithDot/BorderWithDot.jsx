@@ -4,12 +4,13 @@ import "./BorderWithDot.scss";
 const BorderWithDot = ({
     className = "",
     children,
+    variant = "default",
 }) => {
     return (
-        <div className={`border-with-dot ${className}`}>
+        <span className={`border-with-dot border-with-dot--${variant} ${className}`}>
             {children}
             <div className="border-with-dot__border" />
-        </div>
+        </span>
     );
 };
 
