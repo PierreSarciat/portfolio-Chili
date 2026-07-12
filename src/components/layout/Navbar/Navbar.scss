@@ -1,31 +1,34 @@
-// src/components/Navbar.scss
 .navbar-container {
-    display: flex;
-    align-items: center;
-    padding-top: 15px;
-    background-color: rgba(245, 238, 228, 0.95); // Fond parchemin chaud
-    backdrop-filter: blur(5px);
-    box-shadow: 0 2px 10px rgba(58, 49, 44, 0.1);
-    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
+
+    width: 100%;
+    padding: 15px 40px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(245, 238, 228, 0.95);
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
     z-index: 1000;
 }
 
-// Section Incipit : Logo + Titre
+/* ---------- Logo ---------- */
+
 .incipit {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin: 0px 0px 20px 20px;
+    margin-right: 60px;
 
-    .logo-container {
-        .logo {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
+    .logo {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
     }
 
     .logo-texte {
@@ -33,75 +36,130 @@
         flex-direction: column;
 
         h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #3A312C; // Couleur sépia foncé
             margin: 0;
+            font-family: var(--font-title);
+            color: #3A312C;
             letter-spacing: 1px;
         }
 
         p {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.9rem;
-            color: #6B5B4F; // Couleur sépia clair
             margin: 0;
+            font-family: var(--font-body);
             font-style: italic;
+            color: #6B5B4F;
         }
     }
 }
 
-// Barre de navigation
+/* ---------- Navigation ---------- */
+
 .navbar {
-    width: 100%;
-    max-width: 1200px;
-
-    .navbar-links {
-        display: flex;
-        justify-content: flex-end;
-        gap: 30px;
-        list-style: none;
-
-        li {
-            a {
-                text-decoration: none;
-                font-family: 'Lato', sans-serif;
-                font-size: 0.8rem;
-                font-weight: 600;
-                color: #3A312C;
-                transition: color 0.3s ease;
-                padding: 5px 10px;
-                
-
-                &:hover {
-                    color: #B89A73; // Couleur accent sépia
-                }
-
-                &.active {
-                    color: #B89A73;
-                    
-                }
-            }
-        }
-    }
+    position: relative;
+    flex: 1;
 }
 
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-// Responsive : Adaptation pour mobile
-@media (max-width: 768px) {
+.navbar-links li {
+    position: relative;
+}
+
+.navbar-links a {
+    display: block;
+
+    padding: 12px 0;
+
+    text-decoration: none;
+
+    color: #3A312C;
+
+    font-family: var(--font-body);
+    font-size: .82rem;
+    font-weight: 600;
+
+    letter-spacing: .08em;
+
+    transition: color .25s;
+}
+
+.navbar-links a:hover {
+    color: #8C6A43;
+}
+
+.navbar-links a.active {
+    color: #8C6A43;
+}
+
+/* ---------- Barre animée ---------- */
+
+.navbar-border {
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: #8C6A43;
+
+    transition:
+        left .35s ease,
+        width .35s ease;
+}
+
+.navbar-border::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 0 6px;
+
+    background: rgba(245, 238, 228, 0.95);
+
+    color: #8C6A43;
+
+    font-size: .8rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+
     .navbar-container {
         flex-direction: column;
+        align-items: flex-start;
         padding: 15px;
     }
 
     .incipit {
-        margin-bottom: 15px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        width: 100%;
     }
 
     .navbar-links {
-        flex-wrap: wrap;
-        gap: 15px;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
     }
+
 }
