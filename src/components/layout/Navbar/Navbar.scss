@@ -119,22 +119,15 @@
 
 .navbar-border::after {
 
-    content: "✦";
+    content:"✦";
 
     position: absolute;
-
     left: 50%;
-    top: 50%;
+    transform: translate(-50%, -50%);  
 
-    transform: translate(-50%, -50%);
+    color:var(--dot-color);
 
-    padding: 0 6px;
-
-    background: rgba(245, 238, 228, 0.95);
-
-    color: #8C6A43;
-
-    font-size: .8rem;
+    font-size: var(--dot-size);
 }
 
 /* ---------- Responsive ---------- */
