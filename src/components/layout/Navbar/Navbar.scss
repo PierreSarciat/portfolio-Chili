@@ -57,7 +57,6 @@
     position: relative;
     flex: 1;
 }
-
 .navbar-links {
     display: flex;
     justify-content: flex-end;
@@ -67,14 +66,11 @@
     margin: 0;
     padding: 0;
 }
-
 .navbar-links li {
     position: relative;
 }
-
 .navbar-links a {
     display: block;
-
     padding: 12px 0;
 
     text-decoration: none;
@@ -112,9 +108,7 @@
 
     background: #8C6A43;
 
-    transition:
-        left .35s ease,
-        width .35s ease;
+    
 }
 
 .navbar-border::after {
