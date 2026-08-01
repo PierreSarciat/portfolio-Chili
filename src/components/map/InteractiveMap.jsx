@@ -7,9 +7,9 @@ export function InteractiveMap() {
     /* const backgroundImageUrl = 'https://images.unsplash.com/photo-1713862032419-95a24b005dbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZSUyMHZpbnRhZ2UlMjBtYXB8ZW58MXx8fHwxNzgwNDMxMTUzfDA&ixlib=rb-4.1.0&q=80&w=1080';*/
 
     const regions = [
-        { id: 'chiloe', name: 'Chiloé', x: '80%', y: '63%' },
-        { id: 'patagonie', name: 'Patagonie', x: '85%', y: '70%' },
-        { id: 'puertowilliams', name: 'Puerto Williams', x: '80%', y: '90%' },
+        { id: 'chiloe', name: 'Chiloé', x: '80%', y: '58%' },
+        { id: 'patagonie', name: 'Patagonie', x: '85%', y: '90%' },
+        { id: 'puertowilliams', name: 'Puerto Williams', x: '80%', y: '96%' },
         { id: 'torresdelpaine', name: 'Torres del Paine', x: '77%', y: '85%' },
     ];
 
