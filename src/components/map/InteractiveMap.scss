@@ -40,31 +40,5 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* Supprimez le background-color et opacity: 0 */
-    /* Le calque reste transparent mais ses enfants (NavLink) seront visibles */
-}
 
-.region-label-container {
-    text-decoration: none;
-    cursor: pointer;
-    z-index: 10;
-    position: absolute;
-    text-wrap: nowrap;
-    /* Assurez-vous que les NavLink sont positionnés correctement */
 }
-
-.region-label {
-    color: #3A2E22;
-   
-   
-    font-size: 1rem;
-    font-weight: 500;
-   
-    transition: all 0.3s ease;
-}
-
-.region-label:hover {
-    color: #997b5d;
-    transform: scale(1.05);
-}
-

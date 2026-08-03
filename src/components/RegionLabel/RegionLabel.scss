@@ -1,9 +1,9 @@
 .region-label-container {
-    position: absolute;
     text-decoration: none;
     cursor: pointer;
     z-index: 10;
-    display: inline-block;
+    position: absolute;
+    text-wrap: nowrap;
 }
 
 .region-label-link {
@@ -14,19 +14,13 @@
 
 .region-label {
     color: #3A2E22;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
     font-size: 1rem;
     font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    display: inline-block;
-    position: relative;
 }
 
 .region-label:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    color: #997b5d;
     transform: scale(1.05);
 }
 
@@ -35,7 +29,8 @@
     position: absolute;
     background: var(--line-color, #B89A73);
     transform-origin: center;
-    pointer-events: none; /* Permet de cliquer à travers la ligne */
+    pointer-events: none;
+    /* Permet de cliquer à travers la ligne */
 }
 
 
@@ -48,4 +43,3 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
