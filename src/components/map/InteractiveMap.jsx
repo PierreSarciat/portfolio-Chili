@@ -15,17 +15,15 @@ export function InteractiveMap() {
     ];
 
     return (
-        <div className="interactive-map-outer-border">
-            <div className="interactive-map-inner-border">
-                <div className="interactive-map-container">
+        <div className="interactive-map-container">
+            <div className="interactive-map-outer-border">
+                <div className="interactive-map-inner-border">
                     {/* Image de fond avec filtres pastels */}
                     <img
                         src={chileMap}
                         alt="Carte du Chili"
                         className="chile-map-image"
                     />
-
-
 
                     {/* Régions cliquables avec traits */}
                     <div className="regions-overlay">
@@ -41,7 +39,6 @@ export function InteractiveMap() {
                                 lineColor="#B89A73"
                             />
                         ))}
-
                     </div>
                 </div>
             </div>
