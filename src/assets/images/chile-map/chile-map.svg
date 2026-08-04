@@ -4,9 +4,14 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="881.000000pt" height="1786.000000pt" viewBox="0 0 881.000000 1786.000000"
  preserveAspectRatio="xMidYMid meet">
-
+<style>
+    /* Applique le remplissage à tous les path dans ce SVG */
+    path {
+      fill: #d78c8c;
+    }
+  </style>
 <g transform="translate(0.000000,1786.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+ stroke="none">
 <path d="M4573 17529 c-12 -12 -43 -29 -70 -38 -39 -13 -47 -20 -44 -36 13
 -77 11 -111 -11 -149 -20 -34 -33 -43 -98 -65 -80 -28 -95 -38 -79 -57 6 -7 7
 -33 4 -61 -4 -26 -2 -82 5 -123 6 -41 13 -95 16 -120 2 -25 7 -52 11 -60 3 -8
