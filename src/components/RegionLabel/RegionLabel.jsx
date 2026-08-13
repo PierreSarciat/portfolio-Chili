@@ -1,4 +1,3 @@
-// src/components/RegionLabel/RegionLabel.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './RegionLabel.scss';
@@ -8,25 +7,19 @@ export function RegionLabel({
     name,
     x,
     y,
-    lineDirection = 'left',    // Direction de la ligne : 'up', 'down', 'left', 'right'
-    lineLength = 15,         // Longueur de la ligne en pixels
-    lineColor = '#B89A73',   // Couleur de la ligne (par défaut : brun sépia)
+    lineDirection = 'left',
+    lineLength = 15,
+    lineColor = '#B89A73',
 }) {
-    // Convertir les pourcentages en valeurs numériques si nécessaire
-    const xPos = typeof x === 'string' ? parseFloat(x) : x;
-    const yPos = typeof y === 'string' ? parseFloat(y) : y;
-
     return (
         <div
             className="region-label-container"
             style={{
-                position: 'absolute',
-                left: `${xPos}%`,
-                top: `${yPos}%`,
+                left: `${x}%`,
+                top: `${y}%`,
                 transform: 'translate(-50%, -50%)',
             }}
         >
-            {/* Ligne de connexion */}
             <div
                 className={`region-line region-line--${lineDirection}`}
                 style={{
@@ -35,9 +28,13 @@ export function RegionLabel({
                 }}
             />
 
-            {/* Label cliquable */}
-            <NavLink to={`/region/${id}`} className="region-label-link">
-                <span className="region-label">{name}</span>
+            <NavLink
+                to={`/region/${id}`}
+                className="region-label-link"
+            >
+                <span className="region-label">
+                    {name}
+                </span>
             </NavLink>
         </div>
     );
