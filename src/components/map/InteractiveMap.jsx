@@ -24,7 +24,7 @@ export function InteractiveMap() {
             name: 'Puerto Williams',
             x: 77,
             y: 96,
-            lineLength: 56,
+            lineLength: 60,
         },
         {
             id: 'torresdelpaine',
