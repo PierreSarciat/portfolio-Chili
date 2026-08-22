@@ -6,6 +6,12 @@
      display: inline-block; 
   }
 
+  &--title{
+    width: auto;
+        margin-inline: 100px;
+        margin-bottom: 20px;
+  }
+
   &__border {
     position: absolute;
     left: 0;
