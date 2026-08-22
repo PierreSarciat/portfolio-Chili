@@ -2,6 +2,7 @@ import React from 'react';
 import './InteractiveMap.scss';
 import { RegionLabel } from '@components/RegionLabel/RegionLabel';
 import chileMap from '@assets/images/chile-map/chile-map.svg';
+import roseDesVents from '@assets/images/rose-des-vents/rose-des-vents.png';
 
 export function InteractiveMap() {
     const regions = [
@@ -39,6 +40,11 @@ export function InteractiveMap() {
         <div className="interactive-map-container">
             <div className="interactive-map-outer-border">
                 <div className="interactive-map-inner-border">
+                    <img
+                        src={roseDesVents}
+                        alt="Rose des vents"
+                        className="rose-des-vents"
+                    />
 
                     <img
                         src={chileMap}
