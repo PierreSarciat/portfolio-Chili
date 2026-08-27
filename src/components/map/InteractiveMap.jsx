@@ -4,7 +4,7 @@ import { RegionLabel } from '@components/RegionLabel/RegionLabel';
 import chileMap from '@assets/images/chile-map/chile-map.svg';
 import roseDesVents from '@assets/images/rose-des-vents/rose-des-vents.png';
 
-export function InteractiveMap() {
+export function InteractiveMap({ onRegionHover }) {
     const regions = [
         {
             id: 'chiloe',
@@ -12,6 +12,7 @@ export function InteractiveMap() {
             x: 69,
             y: 65,
             lineLength: 135,
+            description: "Chiloé, dans les îles éparses du Pacifique, ancré au sud-ouest du Chili, est un monde à part. Ici, les fjords serpentent entre des collines verdoyantes. L’archipel, bercé par l’isolement et le mystère, préserve une culture unique, où les églises en bois coloré, les maisons sur pilotis et les récits du *Caleuche* tissent une toile envoûtante entre réalité et rêve."
         },
         {
             id: 'patagonie',
@@ -62,6 +63,8 @@ export function InteractiveMap() {
                                 y={region.y}
                                 lineLength={region.lineLength}
                                 lineColor="#B89A73"
+                                onHover={() => onRegionHover(region)}
+                                onLeave={() => onRegionHover(null)}
                             />
                         ))}
                     </div>

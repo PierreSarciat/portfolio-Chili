@@ -10,6 +10,8 @@ export function RegionLabel({
     lineDirection = 'left',
     lineLength = 15,
     lineColor = '#B89A73',
+    onHover,
+    onLeave,
 }) {
     return (
         <div
@@ -18,7 +20,10 @@ export function RegionLabel({
                 left: `${x}%`,
                 top: `${y}%`,
                 transform: 'translate(-50%, -50%)',
+
             }}
+            onMouseEnter={onHover}
+            onMouseLeave={onLeave}
         >
             <div
                 className={`region-line region-line--${lineDirection}`}
