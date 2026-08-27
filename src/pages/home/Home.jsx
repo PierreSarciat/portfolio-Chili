@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { InteractiveMap } from '@/components/map/InteractiveMap';
 import BorderWithDot from "@components/BorderWithDot/BorderWithDot";
 import Carte from "@assets/icons/carte/carte.svg";
 import "./Home.scss"
 
 function Home() {
+
+    const [activeRegion, setActiveRegion] = useState(null);
 
     return (
         <div className="global">
@@ -32,18 +35,27 @@ function Home() {
 
             <section>
 
-                <InteractiveMap />
+                <InteractiveMap
+                    onRegionHover={setActiveRegion}
+                />
             </section>
 
-            <section className='description'>
+            <section className={`description ${activeRegion ? 'is-active' : ''}`}>
                 <div className="logo-carte">
-                    <img
-                        src={Carte}
-                        alt="icône carte"
-                        className=""
-                    />
+                    {!activeRegion && (
+                        <img
+                            src={Carte}
+                            alt="Icône carte"
+                        />
+                    )}
                 </div>
-                <p>Survolez un point sur la carte pour afficher sa description.</p>
+
+                <p>
+                    {activeRegion
+                        ? activeRegion.description
+                        : 'Survolez un point sur la carte pour afficher sa description.'
+                    }
+                </p>
             </section>
         </div>
     );

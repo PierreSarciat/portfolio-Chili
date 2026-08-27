@@ -39,4 +39,20 @@
          padding: 10px;
      }
 
- }
+     
+    p {
+       font-style: italic;
+        color: var(--color-carte);
+    }
+
+    &.is-active {
+    border-color: transparent;
+
+    .logo-carte {
+        border-color: transparent;
+    }
+}
+}
+     
+
+ 
