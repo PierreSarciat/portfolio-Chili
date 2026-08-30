@@ -17,7 +17,7 @@ export function InteractiveMap({ onRegionHover }) {
             description: "Ancré au sud-ouest du Chili, dans les îles éparses du Pacifique, Chiloé est un monde à part. Ici, les fjords serpentent entre des collines verdoyantes. L’archipel, bercé par l’isolement et le mystère, préserve une culture unique, où les églises en bois coloré, les maisons sur pilotis et les récits du *Caleuche* tissent une toile envoûtante entre réalité et rêve.",
             photo_home:
             {
-                "previewSrc": "/assets/images/chiloe/thumb/CHILOE  6 .webp",
+                "previewSrc": "/assets/images/chiloe/thumb/CHILOE_6.webp",
                 "alt": "CHILOE  6 "
             },
         },
@@ -71,7 +71,7 @@ export function InteractiveMap({ onRegionHover }) {
                                 lineLength={region.lineLength}
                                 lineColor="#B89A73"
                                 onHover={() => onRegionHover(region)}
-                                onLeave={() => onRegionHover(null)}
+
                             />
                         ))}
                     </div>
