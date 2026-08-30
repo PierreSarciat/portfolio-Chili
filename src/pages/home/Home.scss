@@ -47,9 +47,16 @@
 
     &.is-active {
     border-color: transparent;
+    
 
     .logo-carte {
         border-color: transparent;
+    }
+
+    p{
+        display: flex;
+    text-align: center;
+        color: black;
     }
 }
 }

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { InteractiveMap } from '@/components/map/InteractiveMap';
 import BorderWithDot from "@components/BorderWithDot/BorderWithDot";
 import Carte from "@assets/icons/carte/carte.svg";
+
+
 import "./Home.scss"
 
 function Home() {
@@ -50,12 +52,32 @@ function Home() {
                     )}
                 </div>
 
-                <p>
-                    {activeRegion
-                        ? activeRegion.description
-                        : 'Survolez un point sur la carte pour afficher sa description.'
-                    }
-                </p>
+
+                {activeRegion ? (
+                    <>
+                        <BorderWithDot variant="title"></BorderWithDot>
+                        <h2>{activeRegion.title}</h2>
+                        <BorderWithDot variant="title"></BorderWithDot>
+
+                        <div className="region-photos">
+                            {activeRegion?.photo_home?.previewSrc && (
+                                <img
+                                    src={activeRegion.photo_home.previewSrc}
+                                    alt={activeRegion.photo_home.alt || ''}
+                                    className="photo-preview"
+                                />
+                            )}
+                        </div>
+                        <p>
+                            {activeRegion.description}
+                        </p>
+                    </>
+                ) : (
+                    <p>
+                        Survolez un point sur la carte pour afficher sa description.
+                    </p>
+                )}
+
             </section>
         </div>
     );
