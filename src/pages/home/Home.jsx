@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { InteractiveMap } from '@/components/map/InteractiveMap';
 import BorderWithDot from "@components/BorderWithDot/BorderWithDot";
 import Carte from "@assets/icons/carte/carte.svg";
+import { NavLink } from 'react-router-dom';
 
 
 import "./Home.scss"
@@ -55,9 +56,9 @@ function Home() {
 
                 {activeRegion ? (
                     <>
-                        <BorderWithDot variant="title"></BorderWithDot>
+
                         <h2>{activeRegion.title}</h2>
-                        <BorderWithDot variant="title"></BorderWithDot>
+                        <BorderWithDot variant="home"></BorderWithDot>
 
                         <div className="region-photos">
                             {activeRegion?.photo_home?.previewSrc && (
@@ -71,6 +72,12 @@ function Home() {
                         <p>
                             {activeRegion.description}
                         </p>
+                        <NavLink
+                            to={`/region/${activeRegion.id}`}
+                            className="explore-region-link"
+                        >
+                            <h3>Explorer la région</h3>
+                        </NavLink>
                     </>
                 ) : (
                     <p>

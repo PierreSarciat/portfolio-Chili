@@ -28,9 +28,9 @@
      align-items: center;
      justify-content: center;
      gap: 20px;
-    height: 600px;
+     height: 600px;
      border: 2px dashed var(--color-carte);
-     
+
 
      .logo-carte {
          border: 2px dashed var(--color-carte);
@@ -39,27 +39,63 @@
          padding: 10px;
      }
 
-     
-    p {
-       font-style: italic;
-        color: var(--color-carte);
-    }
 
-    &.is-active {
-    border-color: transparent;
-    
+     p {
+         font-style: italic;
+         color: var(--color-carte);
+     }
 
-    .logo-carte {
-        border-color: transparent;
-    }
+     &.is-active {
+         border-color: transparent;
 
-    p{
-        display: flex;
-    text-align: center;
-        color: black;
-    }
-}
-}
-     
 
- 
+         .logo-carte {
+             border-color: transparent;
+         }
+
+         .photo-preview {
+             max-width: 250px;
+         }
+
+         p {
+             display: flex;
+             text-align: center;
+             color: black;
+             padding-left: 20px;
+             border-left: 1px solid var(--color-carte-border);
+         }
+
+         .explore-region-link {
+             width: 100%;
+             text-decoration: none;
+             color: inherit;
+
+             h3 {
+                 display: flex;
+                 align-items: center;
+                 gap: 15px;
+                 width: 100%;
+
+                 color: var(--color-carte-border);
+
+                 &::after {
+                     content: "";
+                     display: block;
+                     flex: 1;
+                     height: 1px;
+                     background-color: var(--border-color);
+                 }
+             }
+
+             &:hover {
+                 h3 {
+                     color: var(--color-pastel-peach);
+
+                     &::after {
+                         background-color: var(--color-pastel-peach);
+                     }
+                 }
+             }
+         }
+     }
+ }
