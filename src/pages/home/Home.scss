@@ -54,7 +54,10 @@
          }
 
          .photo-preview {
-             max-width: 250px;
+             width: 300px;
+             height: auto;
+             border: 5px solid white;
+             margin-top: 10px;
          }
 
          p {
