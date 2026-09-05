@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { regions } from "../../data/regions";
+import Gallery3D from "../../components/Gallery3D/Gallery3D";
 import "./Region.scss";
 
 function Region() {
@@ -64,26 +65,19 @@ function Region() {
 
     return (
         <div className="region-container">
-            <h1>{name}</h1>
-            <h2>{subtitle}</h2>
-            <p>{description}</p>
+            <div className='region-container-description'>
+                <h1>{name}</h1>
+                <h2>{subtitle}</h2>
+                <p>{description}</p>
+            </div>
+
 
             {/* Galerie de photos */}
-            <div className="region-gallery">
-                {photos.map((photo, index) => (
-                    <div
-                        key={photo.id}
-                        className="photo-card"
-                        onClick={() => openModal(index)}
-                        style={{ cursor: "pointer" }}
-                    >
-                        <img
-                            src={photo.thumbnailSrc}
-                            alt={photo.alt || "Photo sans description"}
-                            className="photo-thumbnail"
-                        />
-                    </div>
-                ))}
+            <div className="region-gallery-3d">
+                <Gallery3D
+                    photos={photos}
+                    onPhotoClick={openModal}
+                />
             </div>
 
             {/* Modale avec carrousel */}

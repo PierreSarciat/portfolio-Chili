@@ -2,14 +2,14 @@
 const chiloe = {
   id: "chiloe",
   name: "chiloe",
-  subtitle: "",
-  description: "",
+  subtitle: "Entre terre et océan",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
 
   photos: [
   {
     "id": "chiloe-6-",
     "thumbnailSrc": "/assets/images/chiloe/thumb/CHILOE  6 .webp",
-    "previewSrc": "/assets/images/chiloe/thumb/CHILOE  6 .webp",
+    "previewSrc": "/assets/images/chiloe/thumb/CHILOE_6.webp",
     "fullSrc": "/assets/images/chiloe/full/CHILOE  6 .JPG",
     "title": "CHILOE  6 ",
     "alt": "CHILOE  6 "
@@ -150,14 +150,7 @@ const chiloe = {
     "title": "CHILOE 27",
     "alt": "CHILOE 27"
   },
-  {
-    "id": "chiloe-28",
-    "thumbnailSrc": "/assets/images/chiloe/thumb/CHILOE 28.webp",
-    "previewSrc": "/assets/images/chiloe/thumb/CHILOE 28.webp",
-    "fullSrc": "/assets/images/chiloe/full/CHILOE 28.JPG",
-    "title": "CHILOE 28",
-    "alt": "CHILOE 28"
-  },
+  
   {
     "id": "chiloe-3",
     "thumbnailSrc": "/assets/images/chiloe/thumb/CHILOE 3.webp",
