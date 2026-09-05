@@ -12,12 +12,15 @@
     "generate-data": "node scripts/generate-region-data.cjs"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
     "framer-motion": "^12.40.0",
     "prop-types": "^15.8.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.17.0",
-    "sharp": "^0.35.2"
+    "sharp": "^0.35.2",
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
